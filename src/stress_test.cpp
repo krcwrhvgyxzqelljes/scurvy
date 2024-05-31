@@ -123,6 +123,21 @@ int main() {
 
         stats[sol->type] += 1;
         //display(*sol);
+
+        // Info just to test curvel at a time.    
+        const scurvy::solution_t s=*sol;
+        double t1=s.periods.T1;
+        double t2=s.periods.T2;
+        double t3=s.periods.T3;
+        double t4=s.periods.T4;
+        double t5=s.periods.T5;
+        double t6=s.periods.T6;
+        double t7=s.periods.T7;
+
+        for(double i=0; i<s.periods.time(); i+=0.001){
+            double v=s.periods.vt(prob,i);
+            std::cout<<"velocity at t:"<<i<<" v:"<<v<<std::endl;
+        }
     }
 
     return 0;
