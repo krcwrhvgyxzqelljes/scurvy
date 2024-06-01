@@ -4,7 +4,6 @@
 #include <cmath>
 #include <complex>
 #include <array>
-#include <print>
 
 namespace scurvy::impl {
     using namespace std::complex_literals;
